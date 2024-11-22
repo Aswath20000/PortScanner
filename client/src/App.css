@@ -1,118 +1,161 @@
-/* App.css */
-
+/* Global Styles */
 body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #2e7d32;
 }
 
 .App {
-  max-width: 800px;
-  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
 }
 
+/* Headings */
 h1 {
-  text-align: center;
-  color: #4A90E2;
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #1b5e20;
 }
 
 h2 {
-  color: #4A4A4A;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
+  font-size: 1.8em;
   margin-bottom: 15px;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="file"] {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #4A90E2;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #357ABD;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  background-color: #f9f9f9;
-  margin: 5px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-pre {
-  background-color: #f4f4f9;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  overflow-x: auto;
-}
-
-div {
-  margin-bottom: 20px;
-}
-
-input[type="file"] {
-  border: none;
-  background-color: #f4f4f9;
-  padding: 5px 0;
+  color: #388e3c;
 }
 
 h3 {
-  margin-top: 20px;
-  color: #4A4A4A;
+  font-size: 1.2em;
+  margin: 20px 0 10px;
+  color: #2e7d32;
+  border-bottom: 2px solid #66bb6a;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Card Styles */
+.card {
+  background: linear-gradient(145deg, #ffffff, #e8f5e9);
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 128, 0, 0.2);
+  margin: 20px auto;
+  padding: 25px;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 128, 0, 0.3);
+}
+
+.card h2 {
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.card input,
+.card button {
+  width: calc(100% - 20px);
+  margin: 10px auto 15px;
+  padding: 12px;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  display: block;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card input:focus {
+  border-color: #66bb6a;
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.5);
+}
+
+/* Buttons */
+.card button {
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #43a047;
+  box-shadow: 0 5px 10px rgba(67, 160, 71, 0.3);
+}
+
+.card button:disabled {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Lists */
+.card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.card ul li {
+  background: #e8f5e9;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 15px;
+  color: #388e3c;
+  box-shadow: 0 2px 4px rgba(0, 128, 0, 0.1);
+}
+
+.card ul li strong {
+  color: #1b5e20;
+}
+
+/* Preformatted Text */
+.card pre {
+  background: #f1f8e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #2e7d32;
+}
+
+/* File Upload */
+.card input[type="file"] {
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .App {
-      padding: 15px;
+  .card {
+      padding: 20px;
   }
 
-  button {
-      width: 100%;
-      margin-bottom: 10px;
+  h1 {
+      font-size: 2em;
   }
 
-  input[type="text"],
-  input[type="number"] {
-      font-size: 14px;
+  h2 {
+      font-size: 1.5em;
   }
 }

@@ -110,8 +110,8 @@ function App() {
         <div className="App">
             <h1>Network Tools</h1>
 
-            {/* Ping */}
-            <div>
+            
+            <div id="Ping" className='card'>
                 <h2>Ping IP</h2>
                 <input value={ipAddress} onChange={(e) => setIpAddress(e.target.value)} placeholder="Enter IP" />
                 <button onClick={handlePing} disabled={isPinging}>
@@ -120,8 +120,8 @@ function App() {
                 {pingResult && <pre>{JSON.stringify(pingResult, null, 2)}</pre>}
             </div>
 
-            {/* Port Scan */}
-            <div>
+            
+            <div id="Port" className='card'>
                 <h2>Port Scan</h2>
                 <input
                     type="number"
@@ -153,8 +153,8 @@ function App() {
                 </ul>
             </div>
 
-            {/* Network Scan */}
-            <div>
+            
+            <div id="Network" className='card'>
                 <h2>Network Scan</h2>
                 <input
                     value={subnet}
@@ -170,8 +170,8 @@ function App() {
                 </ul>
             </div>
 
-             {/* Malware File Scan */}
-        <div>
+             
+        <div id="Malware" className='card'>
             <h2>Upload File for Malware Scan</h2>
             <input type="file" onChange={(e) => setFile(e.target.files[0])} />
             <button onClick={handleFileUpload}>Upload and Scan</button>
